@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | Phanerosis Carpentry</title>
+    <link rel="stylesheet" href="stylesheet.css" />
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script src="script.js" defer></script>
+
+</head>
+
+<body>
+    <header class="main-header">
+
+            <div class="container-brand">
+                <img src="./assets/color_logo.png" alt="logo">
+                <div class="brand-name"><span class="company-red">P</span>hanerosis <span class = "company-yellow">F</span>urniture <span class="company-green">E</span>nt</div>
+            </div>
+            <ul class="main-menu hideOnSmallScreens">
+                <li ><a href="index.html">Home</a></li>
+                <li ><a href="about.html">About</a></li>
+                <li ><a href="products.html">Products</a></li>
+                <li ><a href="contact.html">Contact</a></li>
+            </ul>
+            <span class = "menu-toggle" onclick="showSideBar()">
+                <span class="material-symbols-outlined menu">menu</span>
+            </span>
+
+            <ul class="sidebar">
+                <li onclick="hideSideBar()">
+                    <span class="material-symbols-outlined close">close</span>
+                </li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+    </header>
+
+    <section class="hero-section">
+        <div class="container">
+            <h2>Custom Carpentry Solutions</h2>
+            <p>Browse handmade wooden furniture and place your request with ease.</p>
+            <a href="products.html" class="btn-primary">View Products</a>
+        </div>
+    </section>
+
+    <section class="highlights">
+        <div class="container">
+            <h3>Why Choose Us?</h3>
+            <div class="features">
+                <div class="feature">
+                    <h4>🩽 Quality Wood</h4>
+                    <p>We use premium local hardwood for lasting builds.</p>
+                </div>
+                <div class="feature">
+                    <h4>👷️ Handcrafted Designs</h4>
+                    <p>Each product is handmade with care and skill.</p>
+                </div>
+                <div class="feature">
+                    <h4>🚞 Custom Orders</h4>
+                    <p>Request furniture to fit your exact needs and style.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 BeIT Lechem. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function showSideBar() {
+            const sidebar = document.querySelector('.sidebar').classList.add('active');
+            // show sidebar
+        }
+
+        function hideSideBar() {
+            const sidebar = document.querySelector('.sidebar').classList.remove('active');  // hide sidebar
+        }
+    </script>
+
+</body>
+
+</html>

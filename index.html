@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="assets/favicon.png" type="image/png">
-    <title>Home | Phanerosis Carpentry</title>
+    <title>Phanerosis Carpentry</title>
     <link rel="stylesheet" href="stylesheet.css" />
     <link href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -90,15 +90,15 @@
             <h3>Why Choose Us?</h3>
             <div class="features">
                 <div class="feature">
-                    <h4>🩽 Quality Wood</h4>
+                    <h4>Quality Wood</h4>
                     <p>We use premium local hardwood for lasting builds.</p>
                 </div>
                 <div class="feature">
-                    <h4>👷️ Handcrafted Designs</h4>
+                    <h4>Handcrafted Designs</h4>
                     <p>Each product is handmade with care and skill.</p>
                 </div>
                 <div class="feature">
-                    <h4>🚞 Custom Orders</h4>
+                    <h4>Custom Orders</h4>
                     <p>Request furniture to fit your exact needs and style.</p>
                 </div>
             </div>
@@ -106,31 +106,119 @@
     </section>
 
     <section class="view-cards">
-        <div class=furniture-grid>
 
-            <div class="furniture-cards">
-                <img class="pic" src="assets/closet1.jpg" alt="Closet Set">
-                <p> The first blog </p>
+        <div class="furniture-type-kitchen">
+            <h4>Furniture Types</h4>
+            <h5> Shop by Kitchen</h5>
+
+
+            <div class=furniture-grid-kitchen>
+
+                <div class="furniture-cards">
+                    <img class="pic" src="assets/kitchen5.jpg" alt="kitchen Set" onclick="openModal()">
+                    <p> Brown Marble Kitchen Worktop </p>
+                </div>
+
+
+                <div class="furniture-cards">
+                    <img class="pic" src="assets/IMG-20251107-WA0011.jpg" alt="Kitchen Set">
+                    <p> Grey Kitchen Worktop </p>
+                </div>
+
+                <div class="furniture-cards">
+                    <img class="pic" src="assets/kitchen3.jpg" alt="Kitchen Set">
+                    <p> Insitu Kitchen Worktop </p>
+                </div>
+
             </div>
 
+            <button class="view-more-btn">View More</button>
 
-            <div class="furniture-cards">
-                <img class="pic" src="assets/dining_alt.jpg" alt="Dining Set">
-                <p> The first blog </p>
-            </div>
+            <!-- Modal for enlarged image
+            <--div id="imageModal" class="modal">
+                <span class="close" onclick="closeModal()">✖</span>
+                <img class="modal-content" id="largeImage">
+            </div-->
 
-            <div class="furniture-cards">
-                <img class="pic" src="assets/kitchen3.jpg" alt="Kitchen Set">
-                <p> The first blog </p>
-            </div>
-
-
-            <div class="furniture-cards">
-                <img class="pic" src="assets/bed1.jpg" alt="Bedroom Set">
-                <p> The first blog </p>
-            </div>
         </div>
     </section>
+    
+    <section class="view-cards">
+    <div class="furniture-type-kitchen">
+        <h4>Furniture Types</h4>
+        <h5> Shop by Closet</h5>
+
+
+        <div class=furniture-grid-kitchen>
+
+            <div class="furniture-cards">
+                <img class="pic" src="assets/kitchen5.jpg" alt="kitchen Set" onclick="openModal()">
+                <p> Brown Marble Kitchen Worktop </p>
+            </div>
+
+
+            <div class="furniture-cards">
+                <img class="pic" src="assets/IMG-20251107-WA0011.jpg" alt="Kitchen Set">
+                <p> Grey Kitchen Worktop </p>
+            </div>
+
+            <div class="furniture-cards">
+                <img class="pic" src="assets/closet1.jpg" alt="Kitchen Set">
+                <p> Insitu Kitchen Worktop </p>
+            </div>
+
+        </div>
+
+        <button class="view-more-btn">View More</button>
+
+        <!-- Modal for enlarged image
+            <--div id="imageModal" class="modal">
+                <span class="close" onclick="closeModal()">✖</span>
+                <img class="modal-content" id="largeImage">
+            </div-->
+
+    </div>
+    </section>
+
+
+      <section class="view-cards">
+    <div class="furniture-type-kitchen">
+        <h4>Furniture Types</h4>
+        <h5> Shop by Bedroom Furniture</h5>
+
+
+        <div class=furniture-grid-kitchen>
+
+            <div class="furniture-cards">
+                <img class="pic" src="assets/bed1.jpg" alt="solid wooden bed" onclick="openModal()">
+                <p> Solid Wooden Bed </p>
+            </div>
+
+
+            <div class="furniture-cards">
+                <img class="pic" src="assets/bedroom closet.jpg" alt="bedroom-closet">
+                <p> Wall to Wall Solid Wooden Closet </p>
+            </div>
+
+            <div class="furniture-cards">
+                <img class="pic" src="assets/closet1.jpg" alt="bedroom-closet">
+                <p> Solid Wood Closet </p>
+            </div>
+
+        </div>
+
+        <button class="view-more-btn">View More</button>
+
+        <!-- Modal for enlarged image
+            <--div id="imageModal" class="modal">
+                <span class="close" onclick="closeModal()">✖</span>
+                <img class="modal-content" id="largeImage">
+            </div-->
+
+    </div>
+    </section>
+
+
 
     <footer class="site-footer">
         <div class="container">

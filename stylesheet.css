@@ -200,7 +200,7 @@ color: var(--primary-color);
 
 
 .hero-accent {
-  position: absolute;
+  position: relative;
   width: 25rem;              /* 300px */
   height: 12rem;             /* 300px */
   background-color: white;
@@ -265,22 +265,29 @@ color: var(--primary-color);
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+
   .hero-accent {
-    top: auto;
-    bottom: 8%;
-    left: 30%;
-    transform: translateX(-80%);
-    text-align: left;
-    width: 15rem;              
-    height: 7rem;
+    margin-bottom: -4rem;
+    clear: both;
+    position:relative;
+  width: 8rem;              /* 300px */
+  height: 4rem;             /* 300px */
+  background-color: white;
+  z-index: 2;
+  padding:5px;
+  font-family:'Times New Roman', Times, serif;
+  box-shadow: 0 0.75rem 1rem rgba(0,0,0,0.3); /* subtle depth */
+  background-color: #5A3E2B;    /* deep brown shade */
+  background: linear-gradient(145deg, #5A3E2B, white);
+  backdrop-filter: blur(20px);   /* glassy blur effect */
+    
   }
   .hero-accent h3 {
-    font-size: 0.90rem;
+    font-size: 0.70rem;
   }
   .hero-accent p {
-    font-size: .5rem;
+    font-size: .3rem;
     max-width: 90%;
-    margin-inline: auto;
   }
 }
 
@@ -342,15 +349,17 @@ color: var(--primary-color);
       font-weight: 600;
     }
 
-    .highlights {
-      padding: 4rem;
-      background-color: white;
-      max-height: 15rem;
-      text-align: center;
-       clear: both;
+    .highlights-section {
+      
+    display:flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: white;
+    text-align: center;
+     
     }
 
-    .highlights h3{
+    .highlights-section h3{
       color: var(--primary-color);
       margin-bottom: 1rem;
       font-size: 2.0rem;
@@ -360,14 +369,14 @@ color: var(--primary-color);
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      margin-top: 2rem;
+      margin-bottom: 3rem;   /* safe spacing */
       gap: 2rem;
-      clear:both;
+      width:100%;
 
     }
 
     .feature {
-      flex: 1 1 30%;
+      flex: 1 1 calc(33.33% - 2rem);  /* clean 3-column layout */
       background-color: #f9f9f9;
       padding: 1.5rem;
       border-radius: 12px;
@@ -397,23 +406,25 @@ color: var(--primary-color);
     
     /* Responsive adjustments */
 @media (max-width: 768px) {
-  .features {
+
+  .highlights-section {
     display:flex;
     flex-direction: column;
+    padding: 1rem;
+    background-color: white;
+    text-align: center;}
+
+  .features {
+    flex-direction: column;
     gap: 1.5rem;
-    margin-bottom: 22rem;
+    margin-bottom: 3rem;
     
   }
 
   .feature {
-display: flex;
-flex-direction: column;
-clear: both; 
+    flex: 1 1 100%;
  }
 }
-
-
-  
 
   .view-cards {
   display: flex;

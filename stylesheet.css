@@ -99,6 +99,13 @@
       
     }
 
+  /* Style for active menu link */
+    li.active {
+    color: #A53DFF;
+    font-weight: 600;
+    border-bottom: 2px solid #A53DFF;
+    }
+    
     /* Hero Section */
   
     .hero-section h2 {
@@ -163,8 +170,6 @@
   border-radius: 0 3px 3px 0;
   user-select: none;
   border: 0.0625rem solid #000; /* thin black border */
-
-  
 }
  
 /* Position the "next button" to the right */
@@ -267,9 +272,9 @@ color: var(--primary-color);
 @media (max-width: 768px) {
 
   .hero-accent {
-    margin-bottom: -4rem;
-    clear: both;
-    position:relative;
+  margin-bottom: -4rem;
+  clear: both;
+  position:relative;
   width: 8rem;              /* 300px */
   height: 4rem;             /* 300px */
   background-color: white;
@@ -280,11 +285,12 @@ color: var(--primary-color);
   background-color: #5A3E2B;    /* deep brown shade */
   background: linear-gradient(145deg, #5A3E2B, white);
   backdrop-filter: blur(20px);   /* glassy blur effect */
-    
   }
+
   .hero-accent h3 {
     font-size: 0.70rem;
   }
+
   .hero-accent p {
     font-size: .3rem;
     max-width: 90%;

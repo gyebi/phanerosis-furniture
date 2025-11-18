@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+    <title>Products|Phanerosis Carpentry</title>
+    <link rel="stylesheet" href="stylesheet.css" />
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script src="phanerosis.js" defer></script>
+
+</head>
+
+<body>
+    <header class="main-header">
+
+        <div class="container-brand">
+            <img src="./assets/color_logo.png" alt="logo">
+            <div class="brand-name"><span class="company-red">P</span>hanerosis <span
+                    class="company-yellow">F</span>urniture <span class="company-green">E</span>nt</div>
+        </div>
+        <ul class="main-menu hideOnSmallScreens">
+            <li><a href="index.html" data-page="home">Home</a></li>
+            <li><a href="about.html" data-page="about">About</a></li>
+            <li><a href="products.html" data-page="products">Products</a></li>
+            <li><a href="contact.html" data-page="contact">Contact</a></li>
+        </ul>
+        <span class="menu-toggle" aria-label="Open Menu" onclick="showSideBar()">
+            <span class="material-symbols-outlined menu">menu</span>
+        </span>
+
+        <ul class="sidebar" id="sidebarMenu">
+            <li onclick="hideSideBar()" aria-label="Close Menu">
+                <span class="material-symbols-outlined close">close</span>
+            </li>
+            <li><a href="index.html" data-page="home">Home</a></li>
+            <li><a href="about.html" data-page="about">About</a></li>
+            <li><a href="products.html" data-page="products">Products</a></li>
+            <li><a href="contact.html" data-page="contact">Contact</a></li>
+        </ul>
+    </header>
+
+
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 BeIT Lechem. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function showSideBar() {
+            const sidebar = document.querySelector('.sidebar').classList.add('active');
+            // show sidebar
+        }
+
+        function hideSideBar() {
+            const sidebar = document.querySelector('.sidebar').classList.remove('active');  // hide sidebar
+        }
+
+
+    </script>
+
+</body>
+
+</html>

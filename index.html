@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="assets/favicon.png" type="image/png">
-    <title>Phanerosis Carpentry</title>
+    <title>Home|Phanerosis Carpentry</title>
     <link rel="stylesheet" href="stylesheet.css" />
     <link href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -23,23 +23,23 @@
                     class="company-yellow">F</span>urniture <span class="company-green">E</span>nt</div>
         </div>
         <ul class="main-menu hideOnSmallScreens">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html" data-page="home">Home</a></li>
+            <li><a href="about.html" data-page="about">About</a></li>
+            <li><a href="products.html" data-page="products">Products</a></li>
+            <li><a href="contact.html" data-page="contact">Contact</a></li>
         </ul>
-        <span class="menu-toggle" onclick="showSideBar()">
+        <span class="menu-toggle" aria-label="Open Menu" onclick="showSideBar()">
             <span class="material-symbols-outlined menu">menu</span>
         </span>
 
-        <ul class="sidebar">
-            <li onclick="hideSideBar()">
+        <ul class="sidebar" id="sidebarMenu">
+            <li onclick="hideSideBar()" aria-label="Close Menu">
                 <span class="material-symbols-outlined close">close</span>
             </li>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html" data-page="home">Home</a></li>
+            <li><a href="about.html" data-page="about">About</a></li>
+            <li><a href="products.html" data-page="products">Products</a></li>
+            <li><a href="contact.html" data-page="contact">Contact</a></li>
         </ul>
     </header>
 
@@ -142,80 +142,80 @@
 
         </div>
     </section>
-    
+
     <section class="view-cards">
-    <div class="furniture-type-kitchen">
-        <h4>Furniture Types</h4>
-        <h5> Shop by Closet</h5>
+        <div class="furniture-type-kitchen">
+            <h4>Furniture Types</h4>
+            <h5> Shop by Closet</h5>
 
 
-        <div class=furniture-grid-kitchen>
+            <div class=furniture-grid-kitchen>
 
-            <div class="furniture-cards">
-                <img class="pic" src="assets/kitchen5.jpg" alt="kitchen Set" onclick="openModal()">
-                <p> Brown Marble Kitchen Worktop </p>
+                <div class="furniture-cards">
+                    <img class="pic" src="assets/kitchen5.jpg" alt="kitchen Set" onclick="openModal()">
+                    <p> Brown Marble Kitchen Worktop </p>
+                </div>
+
+
+                <div class="furniture-cards">
+                    <img class="pic" src="assets/IMG-20251107-WA0011.jpg" alt="Kitchen Set">
+                    <p> Grey Kitchen Worktop </p>
+                </div>
+
+                <div class="furniture-cards">
+                    <img class="pic" src="assets/closet1.jpg" alt="Kitchen Set">
+                    <p> Insitu Kitchen Worktop </p>
+                </div>
+
             </div>
 
+            <button class="view-more-btn">View More</button>
 
-            <div class="furniture-cards">
-                <img class="pic" src="assets/IMG-20251107-WA0011.jpg" alt="Kitchen Set">
-                <p> Grey Kitchen Worktop </p>
-            </div>
-
-            <div class="furniture-cards">
-                <img class="pic" src="assets/closet1.jpg" alt="Kitchen Set">
-                <p> Insitu Kitchen Worktop </p>
-            </div>
-
-        </div>
-
-        <button class="view-more-btn">View More</button>
-
-        <!-- Modal for enlarged image
+            <!-- Modal for enlarged image
             <--div id="imageModal" class="modal">
                 <span class="close" onclick="closeModal()">✖</span>
                 <img class="modal-content" id="largeImage">
             </div-->
 
-    </div>
+        </div>
     </section>
 
 
-      <section class="view-cards">
-    <div class="furniture-type-kitchen">
-        <h4>Furniture Types</h4>
-        <h5> Shop by Bedroom Furniture</h5>
+    <section class="view-cards">
+        <div class="furniture-type-kitchen">
+            <h4>Furniture Types</h4>
+            <h5> Shop by Bedroom Furniture</h5>
 
 
-        <div class=furniture-grid-kitchen>
+            <div class=furniture-grid-kitchen>
 
-            <div class="furniture-cards">
-                <img class="pic" src="assets/bed1.jpg" alt="solid wooden bed" onclick="openModal()">
-                <p> Solid Wooden Bed </p>
+                <div class="furniture-cards">
+                    <img class="pic" src="assets/bed1.jpg" alt="solid wooden bed" onclick="openModal()">
+                    <p> Solid Wooden Bed </p>
+                </div>
+
+
+                <div class="furniture-cards">
+                    <img class="pic" src="assets/bedroom closet.jpg" alt="bedroom-closet">
+                    <p> Wall to Wall Solid Wooden Closet </p>
+                </div>
+
+                <div class="furniture-cards">
+                    <img class="pic" src="assets/closet1.jpg" alt="bedroom-closet">
+                    <p> Solid Wood Closet </p>
+                </div>
+
             </div>
 
+            <button class="view-more-btn">View More</button>
 
-            <div class="furniture-cards">
-                <img class="pic" src="assets/bedroom closet.jpg" alt="bedroom-closet">
-                <p> Wall to Wall Solid Wooden Closet </p>
-            </div>
-
-            <div class="furniture-cards">
-                <img class="pic" src="assets/closet1.jpg" alt="bedroom-closet">
-                <p> Solid Wood Closet </p>
-            </div>
-
-        </div>
-
-        <button class="view-more-btn">View More</button>
-
-        <!-- Modal for enlarged image
+            <!-- Modal for enlarged image
             <--div id="imageModal" class="modal">
                 <span class="close" onclick="closeModal()">✖</span>
                 <img class="modal-content" id="largeImage">
             </div-->
 
-    </div>
+        </div>
     </section>
 
 

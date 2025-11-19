@@ -99,12 +99,19 @@
       
     }
 
-  /* Style for active menu link */
-    li.active {
-    color: #A53DFF;
-    font-weight: 600;
-    border-bottom: 2px solid #A53DFF;
-    }
+  /* Active link styles for top menu + sidebar */
+.main-header .main-menu a.active,
+.main-header .sidebar a.active {
+  color: #A53DFF;                 /* highlight color */
+  font-weight: 600;
+  border-bottom: 2px solid #A53DFF;
+}
+
+/* Optional: hover style for all menu links */
+.main-header .main-menu a:hover,
+.main-header .sidebar a:hover {
+  color: #A53DFF;
+}
     
     /* Hero Section */
   

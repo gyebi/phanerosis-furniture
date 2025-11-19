@@ -1,3 +1,18 @@
+console.log("PATHNAME:", window.location.pathname);
+
+// Sidebar JS
+function showSideBar() {
+            const sidebar = document.querySelector('.sidebar').classList.add('active');
+            // show sidebar
+        }
+
+function hideSideBar() {
+            const sidebar = document.querySelector('.sidebar').classList.remove('active');  // hide sidebar
+        }
+
+
+// Slideshow JS
+
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -66,3 +81,39 @@ window.onclick = function (event) {
 };
 */
 
+console.log("FILE DETECTED:", window.location.pathname);
+// Get current file (removes folders + query parameters)
+let file = window.location.pathname
+              .split("/")     // break up the path
+              .pop()          // get the last segment (the filename)
+              .split("?")[0]; // remove query parameters
+
+// Default to index.html if blank
+if (file === "") file = "index.html";
+
+// Default to index.html if blank
+  //const pageMap = [
+    //{pageHtml: "index.html", name: "home"},
+    //{pageHtml: "about.html", name: "about"},
+    //{pageHtml: "products.html", name: "products"},
+    //{pageHtml: "contact.html", name: "contact"}
+  //]
+
+  // Map filename → data-page key
+const pageMap = {
+  "index.html": "home",
+  "about.html": "about",
+  "products.html": "products",
+  "contact.html": "contact"
+};
+
+
+  const currentPageKey = pageMap[file] || "home";
+
+
+ // Apply active class to matching links
+document.querySelectorAll('.main-header a[data-page]').forEach(link => {
+  if (link.dataset.page === currentPageKey) {
+    link.classList.add("active");
+  }
+});

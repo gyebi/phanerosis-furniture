@@ -579,7 +579,7 @@ color: var(--primary-color);
 
 /* Close (X) button */
 .close {
-  position: absolute;
+  margin-top: 10px;
   top: 30px;
   right: 50px;
   color: white;
@@ -610,8 +610,8 @@ color: var(--primary-color);
 
     .sidebar{
     position: fixed; 
-    top:0;
-    right:0;
+    top:10px;
+    right:10px;
     height: 100vh;
     width: 150px;
     z-index: 999;

@@ -1,20 +1,26 @@
-console.log("PATHNAME:", window.location.pathname);
+//--------------------------------------
+// Detect current page
+//--------------------------------------
+console.log("FILE DETECTED:", window.location.pathname);
 
-// Sidebar JS
-function showSideBar() {
-            const sidebar = document.querySelector('.sidebar').classList.add('active');
-            // show sidebar
-        }
+let file = window.location.pathname
+          .split("/")
+          .pop();
 
-function hideSideBar() {
-            const sidebar = document.querySelector('.sidebar').classList.remove('active');  // hide sidebar
-        }
-
-
-// Slideshow JS
+if (file === "index.html") {
+  // Slideshow JS
 
 let slideIndex = 1;
+
+// Initialize slideshow if slides are present
+if (document.getElementsByClassName("slide").length > 0) {
+    showSlides(slideIndex);
+    autoSlides();   // start autoplay
+}
+
 showSlides(slideIndex);
+
+
 
 // Next/previous controls
 function plusSlides(n) {
@@ -54,6 +60,74 @@ function autoSlides() {
 // Start the automatic slideshow
 autoSlides();
 
+
+//Back to top button JS
+  const backToTopBtn = document.getElementById("backToTopBtn");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      backToTopBtn.classList.add("show");
+    } else {
+      backToTopBtn.classList.remove("show");
+    }
+  });
+
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+
+}
+
+
+// Contact page JS
+if (file === "contact.html") {
+
+  // Address to be clicked to open map
+ document.addEventListener("DOMContentLoaded", () => {
+ document.querySelectorAll('.contact-link').forEach(link => {
+    link.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const address = this.dataset.address;
+        if (!address) {
+            console.error("No data-address found on:", this);
+            return;
+        }
+
+        const encoded = encodeURIComponent(address);
+        const mapsURL = `https://www.google.com/maps/search/?api=1&query=${encoded}`;
+
+        console.log("Opening Maps:", mapsURL);
+
+        window.open(mapsURL, "_blank");
+    });
+ });
+});
+} 
+
+//if (file === "") {
+
+
+
+
+
+
+// Sidebar JS
+function showSideBar() {
+            const sidebar = document.querySelector('.sidebar').classList.add('active');
+            // show sidebar
+        }
+
+function hideSideBar() {
+            const sidebar = document.querySelector('.sidebar').classList.remove('active');  // hide sidebar
+        }
+
+/*
+
+*/
 /*
 //modal js
 
@@ -81,24 +155,10 @@ window.onclick = function (event) {
 };
 */
 
-console.log("FILE DETECTED:", window.location.pathname);
-// Get current file (removes folders + query parameters)
-let file = window.location.pathname
-              .split("/")     // break up the path
-              .pop()          // get the last segment (the filename)
-              .split("?")[0]; // remove query parameters
+
 
 // Default to index.html if blank
-if (file === "") file = "index.html";
-
-// Default to index.html if blank
-  //const pageMap = [
-    //{pageHtml: "index.html", name: "home"},
-    //{pageHtml: "about.html", name: "about"},
-    //{pageHtml: "products.html", name: "products"},
-    //{pageHtml: "contact.html", name: "contact"}
-  //]
-
+ 
   // Map filename → data-page key
 const pageMap = {
   "index.html": "home",
@@ -119,21 +179,3 @@ document.querySelectorAll('.main-header a[data-page]').forEach(link => {
 });
 
 
-
-//Back to top button JS
-  const backToTopBtn = document.getElementById("backToTopBtn");
-
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-      backToTopBtn.classList.add("show");
-    } else {
-      backToTopBtn.classList.remove("show");
-    }
-  });
-
-  backToTopBtn.addEventListener("click", () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-  });

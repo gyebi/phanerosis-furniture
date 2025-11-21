@@ -5,11 +5,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="assets/favicon.png" type="image/png">
-    <title>Contact|Phanerosis Carpentry</title>
+    <title>Contact|Phanerosis Furniture</title>
     <link rel="stylesheet" href="stylesheet.css" />
     <link href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
 
 </head>
 
@@ -42,9 +44,87 @@
         </ul>
     </header>
 
+    <section class="contact-wrapper">
+
+        <!-- LEFT SIDE INFO PANEL -->
+        <div class="left-contact-col50">
+            <h2>Let’s get in touch</h2>
+            <p>We are available for any discussion regarding your project !</p>
+
+            <a class="contact-link" data-address="Abele Street, Teshie, Accra Ghana" href="#">
+            <div class="contact-item-adress">
+                <div class="icon-circle">
+                    <i class='bx bx-map'></i>
+                </div>
+                <p><strong>Address:</strong> No.1 Abele Street, Teshie Nungua Accra Ghana</p>
+            </div>
+            </a>
+
+            
+            <a class="contact-link" data-address="Koforidua, Ghana">
+            <div class="contact-item-phone">
+                <div class="icon-circle">
+                <i class='bx bx-phone'></i>
+                </div>
+                <p><strong>Phone:</strong> +233 244 658 361</p>
+            </div>
+            </a>
+
+            
+            <a class="contact-link" data-address="Koforidua, Ghana">
+            <div class="contact-item-send">
+                <div class="icon-circle">
+                <i class='bx bx-send'></i>
+                </div>
+                <p><strong>Email:</strong> sales@phanerosisfurniture.com</p>
+            </div>
+            </a>
+
+            
+            <a class="contact-link" data-address="Koforidua, Ghana">
+            <div class="contact-item-internet">
+                <div class="icon-circle">
+                    <i class='bx bx-globe'></i>
+                </div>
+                <p><strong>Website:</strong> www.phanerosisfurniture.com</p>
+            </div>
+            </a>
+            
+        </div>
+
+        <!-- RIGHT SIDE FORM -->
 
 
-    
+        <div class="right-contact-col50">
+            <div class="contact-header">
+                <h2>Contact Form</h2>
+            </div>
+            <form action="/action_page.php">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+                <label for="country">Country</label>
+                <select id="country" name="country">
+                    <option value="australia">Australia</option>
+                    <option value="canada">Canada</option>
+                    <option value="usa">USA</option>
+                    <option value="ghana">Ghana</option>
+                </select>
+
+                <label for="subject">Subject</label>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+
+
+    </section>
+
+
     <footer class="site-footer">
         <div class="container">
             <p>&copy; 2025 BeIT Lechem. All rights reserved.</p>
@@ -52,6 +132,8 @@
     </footer>
 
     <script src="phanerosis.js"></script>
+
+   
 
 
 </body>

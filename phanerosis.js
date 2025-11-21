@@ -10,17 +10,11 @@ let file = window.location.pathname
 if (file === "index.html") {
   // Slideshow JS
 
-let slideIndex = 1;
+  let slideIndex = 1;  // THIS WAS MISSING
 
-// Initialize slideshow if slides are present
-if (document.getElementsByClassName("slide").length > 0) {
-    showSlides(slideIndex);
-    autoSlides();   // start autoplay
-}
-
-showSlides(slideIndex);
-
-
+   // Initialize slideshow
+  showSlides(slideIndex);
+  autoSlides();
 
 // Next/previous controls
 function plusSlides(n) {
@@ -56,9 +50,8 @@ function autoSlides() {
   showSlides(slideIndex);    // Show updated slide
   setTimeout(autoSlides, 5000); // Change slide every 5 seconds
 }
+}
 
-// Start the automatic slideshow
-autoSlides();
 
 
 //Back to top button JS
@@ -79,7 +72,7 @@ autoSlides();
     });
   });
 
-}
+
 
 
 // Contact page JS

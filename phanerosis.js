@@ -50,8 +50,6 @@ function autoSlides() {
   showSlides(slideIndex);    // Show updated slide
   setTimeout(autoSlides, 5000); // Change slide every 5 seconds
 }
-}
-
 
 
 //Back to top button JS
@@ -72,7 +70,27 @@ if (file === "index.html") {
       behavior: "smooth"
     });
   });
+
+  // CLICK TO ENLARGE IMAGES
+    document.querySelectorAll('.enlarge-img').forEach(img => {
+        img.addEventListener('click', () => {
+            const lightbox = document.getElementById("imgLightbox");
+            const lightImg = document.getElementById("imgLightboxContent");
+
+            lightImg.src = img.src;       // Copy clicked image
+            lightbox.style.display = "flex";
+        });
+    });
+
+    // CLOSE ENLARGED IMAGE WHEN CLICKED
+    document.getElementById("imgLightbox").addEventListener('click', () => {
+        document.getElementById("imgLightbox").style.display = "none";
+    });
 }
+}
+
+
+
 
 
 

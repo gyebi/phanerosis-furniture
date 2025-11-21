@@ -55,6 +55,7 @@ function autoSlides() {
 
 
 //Back to top button JS
+if (file === "index.html") {
   const backToTopBtn = document.getElementById("backToTopBtn");
 
   window.addEventListener("scroll", () => {
@@ -71,14 +72,13 @@ function autoSlides() {
       behavior: "smooth"
     });
   });
+}
 
 
 
 
 // Contact page JS
-if (file === "contact.html") {
-
-  // Address to be clicked to open map
+if (file === "contact.html") { // Address to be clicked to open map
  document.addEventListener("DOMContentLoaded", () => {
  document.querySelectorAll('.contact-link').forEach(link => {
     link.addEventListener('click', function (e) {
@@ -98,8 +98,50 @@ if (file === "contact.html") {
         window.open(mapsURL, "_blank");
     });
  });
+ });
+
+ document.querySelectorAll('.contact-phone').forEach(link => {
+    link.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const phone = this.dataset.phone;
+        if (!phone) return;
+
+        window.location.href = `tel:${phone}`;
+    });
 });
-} 
+
+
+document.querySelectorAll('.contact-email').forEach(link => {
+    link.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const email = this.dataset.email;
+        if (!email) return;
+
+        window.location.href = `mailto:${email}`;
+    });
+});
+
+
+document.querySelectorAll('.contact-whatsapp').forEach(link => {
+    link.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const number = this.dataset.whatsapp;
+        if (!number) return;
+
+        const encoded = encodeURIComponent(number);
+        const url = `https://wa.me/${encoded}`;
+
+        window.open(url, "_blank");
+    });
+});
+
+
+}
+
+  
 
 //if (file === "") {
 

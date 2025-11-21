@@ -865,7 +865,34 @@ color: var(--primary-color);
 .contact-info-panel {
     background: #16c79a;
     color: white;
-    padding: 1rem;
+    padding: .8rem;
+
+}
+
+.contact-item-adress{
+  display: flex;
+  flex-direction: row;
+  justify-content: baseline;
+
+}
+
+.contact-item-phone{
+  display: flex;
+  flex-direction: row;
+  justify-content: baseline;
+}
+
+.contact-item-email{
+  display: flex;
+  flex-direction: row;
+  justify-content: baseline;
+
+}
+
+.contact-item-whatsapp{
+  display: flex;
+  flex-direction: row;
+  justify-content: baseline;
 
 }
 
@@ -873,15 +900,23 @@ color: var(--primary-color);
     margin-bottom: 1rem;
 }
 
+.text-blck p {
+    display: inline-block;
+    justify-content: baseline;
+    font-size: .8rem;
+    padding:6px;
+     
+}
+
 .contact-item {
   display:flex;
   flex-direction: row;
-  height:5rem;
+  height:4rem;
   margin-left: 1.0rem ;
 }
 
 .contact-item i {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
 }
 
 /* RIGHT FORM */
@@ -939,6 +974,11 @@ input[type=submit]:hover {
     overflow: hidden;
     background: #fff;
     margin-bottom: 10px;
+}
+
+.left-contact-col50{
+  padding-left: 50px;
+  
 }
 
 }

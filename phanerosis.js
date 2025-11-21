@@ -10,12 +10,14 @@ let file = window.location.pathname
 if (file === "index.html") {
   // Slideshow JS
 
+   console.log("Running INDEX.JS");
+
   let slideIndex = 1;  // THIS WAS MISSING
 
    // Initialize slideshow
   showSlides(slideIndex);
   autoSlides();
-
+/*
 // Next/previous controls
 function plusSlides(n) {
   showSlides(slideIndex += n);
@@ -23,8 +25,20 @@ function plusSlides(n) {
 
 // Thumbnail image controls
 function currentSlide(n) {
-  showSlides(slideIndex = n);
+ showSlides(slideIndex = n);
 }
+
+*/
+
+   // Next/previous controls
+    window.plusSlides = function (n) {
+        showSlides(slideIndex += n);
+    };
+
+    // Thumbnail controls
+    window.currentSlide = function (n) {
+        showSlides(slideIndex = n);
+    };
 
 function showSlides(n) {
   let i;
@@ -50,7 +64,7 @@ function autoSlides() {
   showSlides(slideIndex);    // Show updated slide
   setTimeout(autoSlides, 5000); // Change slide every 5 seconds
 }
-
+}
 
 //Back to top button JS
 if (file === "index.html") {
@@ -87,7 +101,7 @@ if (file === "index.html") {
         document.getElementById("imgLightbox").style.display = "none";
     });
 }
-}
+
 
 
 
@@ -155,7 +169,6 @@ document.querySelectorAll('.contact-whatsapp').forEach(link => {
         window.open(url, "_blank");
     });
 });
-
 
 }
 

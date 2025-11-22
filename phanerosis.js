@@ -170,7 +170,35 @@ document.querySelectorAll('.contact-whatsapp').forEach(link => {
     });
 });
 
-}
+
+
+
+const btn = document.getElementById("emailSender");
+btn.addEventListener("click", () => {
+        const fname = document.getElementById("fname").value;
+        const lname = document.getElementById("lname").value;
+        const country = document.getElementById("country").value;
+        const message = document.getElementById("subject").value;
+
+        const email = "gyebiwinfred1@yahoo.com";
+
+        const body = 
+          `First Name: ${fname}
+            Last Name: ${lname}
+              Country: ${country}
+                Message: ${message}`;
+
+        const mailtoURL = `mailto:${email}?subject=Website Inquiry&body=${encodeURIComponent(body)}`;
+
+        window.location.href = mailtoURL;
+    });
+
+     // Show confirmation message
+       // status.style.display = "block";
+        //status.textContent = "✔ Your email app has opened. Please click SEND.";
+
+
+  }
 
   
 
